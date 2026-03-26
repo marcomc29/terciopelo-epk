@@ -3,247 +3,159 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TERCIOPELO | EPK Oficial 2026</title>
+    <title>TERCIOPELO | EPK 2026</title>
     
-    <link rel="preload" as="image" href="https://i.postimg.cc/2jnqs9vs/ROMPER-CICLOS-FINAL-SIN-TEXTO(1).png">
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" media="print" onload="this.media='all'">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Raleway:wght@300;400&display=swap" rel="stylesheet">
     
     <style>
         :root {
-            --dark-earth: #2d241d; 
-            --forest-green: #1a3d24; 
-            --venom-yellow: #d4ac0d; 
-            --mystic-beige: #f2e8cf; 
+            --bg: #2d241d; --green: #1a3d24; --gold: #d4ac0d; --text: #f2e8cf;
         }
-
-        * { box-sizing: border-box; }
 
         body {
             font-family: 'Raleway', sans-serif;
-            background-color: var(--dark-earth);
-            color: var(--mystic-beige);
+            background: var(--bg);
+            color: var(--text);
             margin: 0;
-            line-height: 1.6;
-            overflow-x: hidden;
-            text-rendering: optimizeLegibility;
+            line-height: 1.5;
+            -webkit-font-smoothing: antialiased;
         }
 
-        h1, h2, h3, h4 { 
-            font-family: 'Cinzel', serif; 
-            letter-spacing: 3px; 
-            text-transform: uppercase; 
-            margin: 0;
-            color: var(--mystic-beige);
-            font-display: swap;
-        }
+        h2, h3 { font-family: 'Cinzel', serif; text-transform: uppercase; letter-spacing: 2px; color: var(--gold); }
 
-        /* Hero Section Optimizado */
+        /* Hero simplificado */
         header {
             height: 100vh;
-            background: linear-gradient(rgba(45, 36, 29, 0.4), rgba(45, 36, 29, 0.95)), 
-                        url('https://i.postimg.cc/2jnqs9vs/ROMPER-CICLOS-FINAL-SIN-TEXTO(1).png') no-repeat center center;
-            background-size: cover;
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(45,36,29,1)), 
+                        url('https://i.postimg.cc/2jnqs9vs/ROMPER-CICLOS-FINAL-SIN-TEXTO(1).png') center/cover no-repeat;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
             text-align: center;
-            border-bottom: 2px solid var(--venom-yellow);
             padding: 20px;
-            will-change: transform; /* Optimización de renderizado */
         }
 
         .main-logo {
-            max-width: 1600px; 
-            width: 95%; 
+            max-width: 1600px;
+            width: 95%;
             height: auto;
-            filter: drop-shadow(0 0 20px rgba(212, 172, 13, 0.5)); 
-            margin-bottom: 25px;
+            margin-bottom: 20px;
         }
 
-        .hero-subtitle { 
-            font-size: clamp(1rem, 5vw, 1.6rem); 
-            letter-spacing: 16px; 
-            color: var(--venom-yellow); 
-            margin-top: 15px;
-            text-transform: uppercase;
-            font-family: 'Cinzel', serif;
-        }
+        .hero-subtitle { font-family: 'Cinzel', serif; letter-spacing: 12px; color: var(--gold); font-size: 1.4rem; }
 
-        .container { max-width: 1100px; margin: 0 auto; padding: 60px 20px; }
-        .section-title { text-align: center; color: var(--venom-yellow); font-size: 2.2rem; margin-bottom: 40px; }
+        .container { max-width: 1000px; margin: 0 auto; padding: 40px 20px; }
+        .section-title { text-align: center; font-size: 2rem; margin-bottom: 40px; }
 
-        /* Grid de Integrantes */
-        .lineup-gallery {
+        /* Lineup */
+        .lineup-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 20px;
             margin-bottom: 60px;
         }
 
-        .member-card {
-            background: var(--forest-green);
-            border: 1px solid rgba(212, 172, 13, 0.2);
-            text-align: center;
-            overflow: hidden;
-        }
-
-        .member-photo {
-            width: 100%;
-            height: 350px;
-            background-color: #111;
-            background-size: cover;
-            background-position: center;
-            border-bottom: 2px solid var(--venom-yellow);
-        }
-
-        .member-info { padding: 15px; }
-        .member-info strong { color: var(--venom-yellow); display: block; font-size: 1.2rem; }
-        .member-info span { font-size: 0.8rem; letter-spacing: 2px; opacity: 0.8; }
+        .card { background: var(--green); border: 1px solid rgba(212,172,13,0.1); text-align: center; }
+        .photo { width: 100%; height: 300px; background: #111 center/cover; }
 
         /* Discografía */
-        .discography-box {
+        .disco-box {
             display: grid;
-            grid-template-columns: minmax(200px, 350px) 1fr;
+            grid-template-columns: 1fr 2fr;
             gap: 30px;
-            background: rgba(26, 61, 36, 0.2);
-            border: 1px solid var(--venom-yellow);
+            background: rgba(0,0,0,0.2);
             padding: 30px;
-            margin-top: 30px;
+            border: 1px solid var(--gold);
             align-items: center;
         }
 
-        .album-art {
-            width: 100%;
-            height: auto;
-            border: 1px solid var(--venom-yellow);
-        }
+        .disco-box img { width: 100%; border: 1px solid var(--gold); }
 
-        .album-info h3 { color: var(--venom-yellow); margin-bottom: 10px; }
+        /* Prensa y Links */
+        .press { text-align: center; padding: 30px; background: var(--green); margin: 40px 0; border: 1px solid var(--gold); }
+        .press a { color: var(--text); text-decoration: none; font-style: italic; font-size: 1.1rem; }
 
-        /* Prensa */
-        .highlight-box {
-            background: #1e2c21;
-            padding: 30px;
-            border: 1px solid var(--venom-yellow);
-            margin: 30px 0;
-            text-align: center;
-        }
-
-        .press-link { color: var(--mystic-beige); text-decoration: none; }
-        .press-link:hover { color: var(--venom-yellow); }
-
-        /* Botones */
-        .btn-grid { display: flex; flex-wrap: wrap; gap: 15px; justify-content: center; margin: 40px 0; }
-        .btn-download {
-            padding: 15px 25px;
-            border: 1px solid var(--venom-yellow);
-            color: var(--mystic-beige);
+        .links { display: flex; flex-wrap: wrap; gap: 15px; justify-content: center; margin: 40px 0; }
+        .btn {
+            padding: 12px 25px;
+            border: 1px solid var(--gold);
+            color: var(--text);
             text-decoration: none;
-            display: flex;
-            align-items: center;
-            gap: 10px;
             font-family: 'Cinzel', serif;
             font-size: 0.8rem;
-            background: rgba(0,0,0,0.2);
             transition: 0.3s;
         }
+        .btn:hover { background: var(--gold); color: var(--bg); }
 
-        .btn-download:hover { background: var(--venom-yellow); color: var(--dark-earth); }
-
-        footer { 
-            background: #000; 
-            padding: 40px 20px; 
-            text-align: center; 
-            border-top: 2px solid var(--venom-yellow); 
-        }
-
-        .social-icons a { color: var(--mystic-beige); font-size: 1.8rem; margin: 0 15px; transition: 0.2s; }
-        .social-icons a:hover { color: var(--venom-yellow); }
+        footer { text-align: center; padding: 40px; border-top: 1px solid var(--gold); font-size: 0.8rem; }
 
         @media (max-width: 768px) {
-            .discography-box { grid-template-columns: 1fr; text-align: center; }
-            .main-logo { max-width: 90%; }
+            .disco-box { grid-template-columns: 1fr; text-align: center; }
+        }
+
+        /* Optimización PDF */
+        @media print {
+            header { page-break-after: always; }
+            .links { display: none; }
         }
     </style>
 </head>
 <body>
 
     <header>
-        <img src="logopiedra.png" alt="Terciopelo Logo" class="main-logo" loading="eager">
-        <p class="hero-subtitle">Nueva Piel</p>
+        <img src="logopiedra.png" alt="Terciopelo" class="main-logo">
+        <div class="hero-subtitle">Nueva Piel</div>
     </header>
 
     <div class="container">
-        
-        <section id="lineup">
-            <h2 class="section-title">La Alineación</h2>
-            <div class="lineup-gallery">
-                <div class="member-card">
-                    <div class="member-photo" style="background-image: url('https://i.postimg.cc/gc7RpLBj/Marco-Montero-Terciopelo.jpg');" loading="lazy"></div>
-                    <div class="member-info"><strong>Marco Montero</strong><span>Guitarra</span></div>
-                </div>
-                <div class="member-card">
-                    <div class="member-photo" style="background-image: url('https://i.postimg.cc/mgyyT2Hn/Jose-Pablo-Terciopelo.jpg');" loading="lazy"></div>
-                    <div class="member-info"><strong>José Pablo</strong><span>Guitarra</span></div>
-                </div>
-                <div class="member-card">
-                    <div class="member-photo" style="background-image: url('https://i.postimg.cc/C1HvtH4s/David-Mora-Terciopelo.jpg');" loading="lazy"></div>
-                    <div class="member-info"><strong>David Mora</strong><span>Bajo</span></div>
-                </div>
-                <div class="member-card">
-                    <div class="member-photo" style="background-image: url('https://i.postimg.cc/g2m3tFTQ/Tono-Meza-Terciopelo.jpg');" loading="lazy"></div>
-                    <div class="member-info"><strong>Tono Meza</strong><span>Batería</span></div>
-                </div>
+        <h2 class="section-title">La Alineación</h2>
+        <div class="lineup-grid">
+            <div class="card">
+                <div class="photo" style="background-image: url('https://i.postimg.cc/gc7RpLBj/Marco-Montero-Terciopelo.jpg')"></div>
+                <p><strong>Marco Montero</strong><br>Guitarra</p>
             </div>
-        </section>
-
-        <section id="concept">
-            <h2 class="section-title">El Concepto</h2>
-            <div class="bio-content" style="text-align: justify; max-width: 850px; margin: 0 auto;">
-                <p>Terciopelo es una entidad musical instrumental nacida en las tierras altas de Costa Rica. Nuestra música busca el <strong>trance</strong> a través de atmósferas densas y ritmos que desafían el tiempo.</p>
-                <p>Nuestra obra visual gira en torno a la serpiente terciopelo, simbolizando la ruptura de ciclos para alcanzar una <strong>"Nueva Piel"</strong>.</p>
+            <div class="card">
+                <div class="photo" style="background-image: url('https://i.postimg.cc/mgyyT2Hn/Jose-Pablo-Terciopelo.jpg')"></div>
+                <p><strong>José Pablo</strong><br>Guitarra</p>
             </div>
-        </section>
-
-        <section id="discography">
-            <h2 class="section-title" style="margin-top: 60px;">Discografía</h2>
-            <div class="discography-box">
-                <img src="renacer.png" alt="Álbum Renacer" class="album-art" loading="lazy">
-                <div class="album-info">
-                    <h3>Renacer (2025)</h3>
-                    <p>Cinco temas instrumentales que representan un viaje hacia un nuevo comienzo partiendo desde la sombra. Mezcla y masterización por Kenneth Chavarria.</p>
-                </div>
+            <div class="card">
+                <div class="photo" style="background-image: url('https://i.postimg.cc/C1HvtH4s/David-Mora-Terciopelo.jpg')"></div>
+                <p><strong>David Mora</strong><br>Bajo</p>
             </div>
-        </section>
-
-        <section id="prensa">
-            <h2 class="section-title" style="margin-top: 60px;">Prensa & Recursos</h2>
-            <div class="highlight-box">
-                <a href="https://nacionprogresiva.wordpress.com/..." target="_blank" class="press-link">
-                    <em>"«Renacer» de Terciopelo: un debut ecléctico e innovador..."</em>
-                    <br><small>— NACIÓN PROGRESIVA</small>
-                </a>
+            <div class="card">
+                <div class="photo" style="background-image: url('https://i.postimg.cc/g2m3tFTQ/Tono-Meza-Terciopelo.jpg')"></div>
+                <p><strong>Tono Meza</strong><br>Batería</p>
             </div>
+        </div>
 
-            <div class="btn-grid">
-                <a href="https://drive.google.com/..." target="_blank" class="btn-download"><i class="fas fa-images"></i> FOTOS</a>
-                <a href="https://drive.google.com/..." target="_blank" class="btn-download"><i class="fas fa-video"></i> VIDEOS</a>
-                <a href="https://docs.google.com/..." target="_blank" class="btn-download"><i class="fas fa-file-invoice"></i> RIDER</a>
+        <h2 class="section-title">Discografía</h2>
+        <div class="disco-box">
+            <img src="renacer.png" alt="Renacer">
+            <div>
+                <h3>Renacer (2025)</h3>
+                <p>Cinco temas instrumentales que representan un viaje hacia un nuevo comienzo partiendo desde la sombra y rompiendo ciclos. Producción por Terciopelo, mezcla y máster de Kenneth Chavarria.</p>
             </div>
-        </section>
+        </div>
 
+        <div class="press">
+            <a href="https://nacionprogresiva.wordpress.com/..." target="_blank">
+                "«Renacer» de Terciopelo: un debut ecléctico e innovador para romper los ciclos y trascender."
+            </a>
+        </div>
+
+        <div class="links">
+            <a href="#" class="btn">FOTOS HI-RES</a>
+            <a href="#" class="btn">VIDEOS</a>
+            <a href="#" class="btn">RIDER TÉCNICO</a>
+        </div>
     </div>
 
     <footer>
-        <div class="social-icons">
-            <a href="#" target="_blank"><i class="fab fa-spotify"></i></a>
-            <a href="https://www.youtube.com/@TerciopeloBanda" target="_blank"><i class="fab fa-youtube"></i></a>
-            <a href="https://www.instagram.com/terciopelo___/" target="_blank"><i class="fab fa-instagram"></i></a>
-        </div>
-        <p style="letter-spacing: 2px; font-size: 0.9rem; color: var(--venom-yellow); margin-top: 20px;">CONTACTO: terciopeloband@gmail.com</p>
+        <p>CONTACTO: terciopeloband@gmail.com</p>
+        <p>SAN RAMÓN, COSTA RICA • 2026</p>
     </footer>
 
 </body>
