@@ -28,6 +28,7 @@
 
         h2, h3 { font-family: 'Cinzel', serif; text-transform: uppercase; color: var(--gold); letter-spacing: 2px; }
 
+        /* Hero Section */
         header {
             height: 100vh;
             background: linear-gradient(rgba(0,0,0,0.6), var(--bg)), 
@@ -77,7 +78,7 @@
         .container { width: 100%; max-width: 1100px; margin: 0 auto; padding: 60px 20px; }
         .section-title { text-align: center; font-size: 2rem; margin-bottom: 40px; border-bottom: 1px solid rgba(212,172,13,0.2); padding-bottom: 10px; }
 
-        /* Alineación (Restaurada) */
+        /* Alineación */
         .lineup-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
@@ -99,7 +100,7 @@
         .concept-content p { font-size: 1.1rem; margin-bottom: 20px; font-weight: 300; }
         .concept-content strong { color: var(--gold); }
 
-        /* Multimedia */
+        /* Multimedia / Videos */
         .video-grid {
             display: grid;
             grid-template-columns: 1fr;
@@ -119,7 +120,7 @@
             top: 0; left: 0; width: 100%; height: 100%;
         }
 
-        /* Galería (Nueva) */
+        /* Galería */
         .gallery-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -156,7 +157,7 @@
         .disco-box img { width: 100%; max-width: 350px; border: 1px solid var(--gold); }
         .disco-text { flex: 1; }
 
-        /* Prensa y Botones */
+        /* Prensa */
         .press-box {
             background: var(--green);
             padding: 30px;
@@ -166,6 +167,7 @@
         }
         .press-box a { color: var(--text); text-decoration: none; font-style: italic; font-size: 1.1rem; }
 
+        /* Botones de Recursos */
         .links-grid { display: flex; flex-direction: column; gap: 15px; margin: 40px 0; }
         .btn {
             padding: 20px;
@@ -186,8 +188,10 @@
 
         footer { text-align: center; padding: 60px 20px; background: #111; border-top: 2px solid var(--gold); }
         .social-icons { margin-bottom: 20px; }
-        .social-icons a { color: var(--text); font-size: 1.8rem; margin: 0 15px; }
+        .social-icons a { color: var(--text); font-size: 1.8rem; margin: 0 15px; transition: 0.3s; }
+        .social-icons a:hover { color: var(--gold); }
 
+        /* Responsive Desktop */
         @media (min-width: 768px) {
             .video-grid { grid-template-columns: 1fr 1fr; }
             .disco-box { flex-direction: row; text-align: left; }
@@ -311,6 +315,7 @@
 
     <footer>
         <div class="social-icons">
+            <a href="https://open.spotify.com/artist/4X9oHkZ9W7W6f6z0vYxQp8" target="_blank" rel="noopener noreferrer"><i class="fab fa-spotify"></i></a>
             <a href="https://www.youtube.com/@TerciopeloBanda" target="_blank" rel="noopener noreferrer"><i class="fab fa-youtube"></i></a>
             <a href="https://www.instagram.com/terciopelo___/" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
             <a href="mailto:terciopeloband@gmail.com"><i class="fas fa-envelope"></i></a>
