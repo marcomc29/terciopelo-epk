@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TERCIOPELO | EPK Oficial</title>
     
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Raleway:wght@300;400&display=swap" rel="stylesheet">
@@ -26,6 +28,7 @@
 
         h2, h3 { font-family: 'Cinzel', serif; text-transform: uppercase; color: var(--gold); letter-spacing: 2px; }
 
+        /* Hero Section */
         header {
             height: 100vh;
             background: linear-gradient(rgba(0,0,0,0.6), var(--bg)), 
@@ -97,7 +100,7 @@
         .concept-content p { font-size: 1.1rem; margin-bottom: 20px; font-weight: 300; }
         .concept-content strong { color: var(--gold); }
 
-        /* VIDEOS EMBEDDED */
+        /* Multimedia / Videos */
         .video-grid {
             display: grid;
             grid-template-columns: 1fr;
@@ -106,7 +109,7 @@
         }
         .video-container {
             position: relative;
-            padding-bottom: 56.25%; /* Ratio 16:9 */
+            padding-bottom: 56.25%;
             height: 0;
             overflow: hidden;
             border: 1px solid var(--gold);
@@ -114,17 +117,15 @@
         }
         .video-container iframe {
             position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
+            top: 0; left: 0; width: 100%; height: 100%;
         }
         .video-caption {
             margin-top: 10px;
             font-family: 'Cinzel', serif;
-            font-size: 0.9rem;
+            font-size: 0.8rem;
             color: var(--gold);
             text-align: center;
+            letter-spacing: 1px;
         }
 
         /* Discografía */
@@ -141,7 +142,7 @@
         .disco-box img { width: 100%; max-width: 350px; border: 1px solid var(--gold); }
         .disco-text { flex: 1; }
 
-        /* Prensa y Botones */
+        /* Prensa */
         .press-box {
             background: var(--green);
             padding: 30px;
@@ -149,8 +150,10 @@
             border-left: 4px solid var(--gold);
             margin: 40px 0;
         }
-        .press-box a { color: var(--text); text-decoration: none; font-style: italic; font-size: 1.1rem; }
+        .press-box a { color: var(--text); text-decoration: none; font-style: italic; font-size: 1.1rem; transition: 0.3s; }
+        .press-box a:hover { color: var(--gold); }
 
+        /* Botones de Recursos */
         .links-grid { display: flex; flex-direction: column; gap: 15px; margin: 40px 0; }
         .btn {
             padding: 20px;
@@ -166,13 +169,16 @@
             align-items: center;
             justify-content: center;
             gap: 10px;
+            cursor: pointer;
         }
-        .btn:hover { background: var(--gold); color: var(--bg); }
+        .btn:hover { background: var(--gold); color: var(--bg); transform: translateY(-3px); }
 
         footer { text-align: center; padding: 60px 20px; background: #111; border-top: 2px solid var(--gold); }
         .social-icons { margin-bottom: 20px; }
-        .social-icons a { color: var(--text); font-size: 1.8rem; margin: 0 15px; }
+        .social-icons a { color: var(--text); font-size: 1.8rem; margin: 0 15px; transition: 0.3s; }
+        .social-icons a:hover { color: var(--gold); }
 
+        /* Responsive Desktop */
         @media (min-width: 768px) {
             .video-grid { grid-template-columns: 1fr 1fr; }
             .disco-box { flex-direction: row; text-align: left; }
